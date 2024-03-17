@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap')
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg: #e6e8f4;
+  --bgSoft: "#e6e8f4c6";
+}
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--bg);
+  font-family: Syne, sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
