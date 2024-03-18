@@ -3,6 +3,7 @@ import { Syne } from "next/font/google";
 import TopNav from "@/components/UI/dashboard/topbar/navbar"
 import WorkSection from "./work";
 import ServicesSection from "./services";
+import Faq from "./faq";
 import "./globals.css";
 
 const syne = Syne({ subsets: ['latin'] })
@@ -25,6 +26,7 @@ export default function RootLayout({
         <div className="">
           <WorkSection/>
           <ServicesSection/>
+          <Faq/>
         </div>
       </body>
     </html>

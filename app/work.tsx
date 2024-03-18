@@ -1,12 +1,15 @@
 'use client'
+import React, { useRef } from 'react';
 import { work } from '@/lib/data';
-import React from 'react';
+// import { gsap } from 'gsap';
 import Image from 'next/image';
 
 export default function WorkSection() {
+    const slideshowRef = useRef(null);
+
     return (
-        <div className="h-screen w-screen py-10 flex justify-end items-center  md:px-[100px] px-[20px]">
-            <div className='flex flex-col gap-10 h-full'>
+        <div className="h-screen w-screen py-10 flex justify-end items-center md:px-[100px] px-[20px]">
+            <div ref={slideshowRef} className='flex flex-col gap-10 h-full'>
                 {work.map((works, index) => (
                     <React.Fragment key={index}>
                         <Work {...works} />
@@ -26,9 +29,9 @@ function Work({
     organization,
 }: WorkProps) {
     return (
-        <div className=' w-full h-full'>
+        <div className='w-full h-full'>
             <Image className='w-full h-full' src={image} alt={title} />
-            <div className=' flex flex-col justify-end items-start w-1/2 space-y-3'>
+            <div className='flex flex-col justify-end items-start w-1/2 space-y-3'>
                 <h2>{title}</h2>
                 <p>{organization}</p>
                 <p>{description}</p>
