@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Syne } from "next/font/google";
-import TopNav from "@/components/UI/dashboard/topbar/navbar"
+import TopNav from "@/components/UI/navigations/topbar/navbar"
 import WorkSection from "./work";
 import ServicesSection from "./services";
 import Faq from "./faq";
