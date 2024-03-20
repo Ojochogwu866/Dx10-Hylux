@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Syne } from "next/font/google";
 import TopNav from "@/components/UI/navigations/topbar/navbar"
-import WorkSection from "./work";
-import ServicesSection from "./services";
-import Faq from "./faq";
-import "./globals.css";
+
+import "./globals.css"
 
 const syne = Syne({ subsets: ['latin'] })
 
@@ -23,11 +21,6 @@ export default function RootLayout({
      <body  className={`${syne.className} bg-[#ffffff]`}>
         <TopNav/>
         {children}
-        <div className="">
-          <WorkSection/>
-          <ServicesSection/>
-          <Faq/>
-        </div>
       </body>
     </html>
   );
